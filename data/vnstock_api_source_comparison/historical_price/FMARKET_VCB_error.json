@@ -1,0 +1,6 @@
+{
+  "error": "Chỉ có nguồn dữ liệu từ VCI, TCBS, MSN được hỗ trợ.",
+  "source": "FMARKET",
+  "method": "historical_price",
+  "symbol": "VCB"
+}

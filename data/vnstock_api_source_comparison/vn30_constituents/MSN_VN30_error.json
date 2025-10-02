@@ -1,0 +1,6 @@
+{
+  "error": "RetryError[<Future at 0x265b62f7df0 state=finished raised NotImplementedError>]",
+  "source": "MSN",
+  "method": "vn30_constituents",
+  "symbol": "VN30"
+}

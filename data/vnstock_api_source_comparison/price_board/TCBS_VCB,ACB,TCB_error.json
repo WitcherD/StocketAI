@@ -1,0 +1,6 @@
+{
+  "error": "Symbol phải có độ dài từ 3 đến 10 ký tự.",
+  "source": "TCBS",
+  "method": "price_board",
+  "symbol": "VCB,ACB,TCB"
+}

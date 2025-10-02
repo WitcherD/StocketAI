@@ -1,0 +1,6 @@
+{
+  "error": "Lớp Listing chỉ nhận giá trị tham số source là 'VCI' hoặc 'MSN'.",
+  "source": "FMARKET",
+  "method": "vn30_constituents",
+  "symbol": "VN30"
+}

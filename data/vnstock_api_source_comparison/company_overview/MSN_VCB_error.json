@@ -1,0 +1,6 @@
+{
+  "error": "Lớp Company chỉ nhận giá trị tham số source là 'VCI' hoặc 'TCBS'.",
+  "source": "MSN",
+  "method": "company_overview",
+  "symbol": "VCB"
+}

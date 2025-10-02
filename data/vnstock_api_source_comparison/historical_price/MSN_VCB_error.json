@@ -1,0 +1,6 @@
+{
+  "error": "Chỉ có nguồn dữ liệu từ TCBS, VCI được hỗ trợ.",
+  "source": "MSN",
+  "method": "historical_price",
+  "symbol": "VCB"
+}
