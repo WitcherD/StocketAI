@@ -1,0 +1,9 @@
+exercise_date,cash_year,cash_dividend_percentage,issue_method
+2022-05-31,2021,0.2,cash
+2021-09-15,2020,0.15,cash
+2021-09-15,2021,0.3,share
+2019-08-08,2018,0.1,cash
+2018-10-08,2018,0.25,share
+2018-01-31,2018,2.0,share
+2017-12-31,2017,0.45,cash
+2014-09-26,2013,0.5,cash
