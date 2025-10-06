@@ -23,17 +23,7 @@ Process VN30 raw CSV data into qlib binary format and establish data pipeline fo
 - [ ] **Set up qlib data directory structure** - Create proper data/qlib_format/ organization
 - [ ] **Validate conversion output** - Ensure binary format matches qlib requirements
 
-### Phase 3: Feature Engineering Foundation
-- [ ] **Create feature engineering module** - Build `src/data_processing/feature_engineering.py`
-- [ ] **Implement technical indicators** - Add basic price and volume features using qlib expressions
-- [ ] **Set up feature validation** - Create framework for feature quality assessment
-- [ ] **Configure feature parameters** - Optimize features for VN30 characteristics
 
-### Phase 4: Data Management Module
-- [ ] **Create qlib data handler** - Build `src/data_processing/qlib_data_handler.py`
-- [ ] **Implement data loading utilities** - Functions for loading and accessing qlib data
-- [ ] **Add data preprocessing functions** - Normalization and cleaning utilities
-- [ ] **Set up train/test split logic** - Create data splits for model validation
 
 ### Phase 5: Quality Assurance and Testing
 - [ ] **Implement data validation tests** - Verify data integrity and completeness
@@ -49,28 +39,23 @@ Process VN30 raw CSV data into qlib binary format and establish data pipeline fo
 
 ## Task Goals
 - Convert VN30 CSV data to qlib high-performance binary format
-- Create basic feature engineering with technical indicators
 - Set up data validation and quality assessment
-- Establish data pipeline for subsequent model training tasks
+- Establish data pipeline foundation for subsequent model training tasks
 
 ## Key Deliverables
 - `notebooks/vn30/03_process_vn30_to_qlib_format.ipynb` - One-time data conversion notebook
 - `src/data_processing/vn30_data_converter.py` - Reusable data conversion module
-- `src/data_processing/feature_engineering.py` - Reusable feature engineering module
-- `src/data_processing/qlib_data_handler.py` - Qlib data management module
 - `data/qlib_format/` - Processed VN30 data in qlib format
 
 ## Success Criteria
 - [ ] VN30 data successfully converted to qlib format
-- [ ] Basic technical features generated and validated
 - [ ] Data quality assessment completed
-- [ ] Simple model training pipeline functional
+- [ ] Data validation pipeline functional
 - [ ] Data ready for Task 04 (Baseline Model Training)
 
 ## Next Task Dependencies
 **Task 04: Baseline Model Implementation** will depend on this task's output:
 - Processed VN30 data in qlib format
-- Basic feature matrices for model training
 - Data validation and quality reports
 
 ## Technical Approach
@@ -81,9 +66,8 @@ Process VN30 raw CSV data into qlib binary format and establish data pipeline fo
 
 ## Immediate Next Steps
 1. **Complete data format conversion script**
-2. **Implement basic feature engineering**
-3. **Set up data validation framework**
-4. **Test end-to-end data pipeline**
+2. **Set up data validation framework**
+3. **Test end-to-end data pipeline**
 
 ## Risk Assessment
 - **Low Risk**: Data processing and format conversion

@@ -16,24 +16,24 @@
   - Qlib data structure creation and optimization
   - Error handling for data conversion issues
 
-- **`src/data_processing/feature_engineering.py`** - Basic feature engineering module
-  - Simple technical indicators using qlib expressions
-  - Basic price and volume feature generation
-  - Feature validation and quality checks
-  - Configuration for VN30-specific features
+- **`src/feature_engineering/tft_feature_engineer.py`** - TFT-compatible feature engineering module
+  - TFT-compatible technical indicators using qlib expressions
+  - Advanced price and volume feature generation with Alpha158 compatibility
+  - Comprehensive feature validation and quality checks
+  - VN30-specific feature optimization and TFT model compatibility
 
 ### Data Processing Modules
-- **`src/data_processing/qlib_data_handler.py`** - Qlib data management module
-  - Qlib format data loading and validation utilities
-  - Basic data preprocessing functions
-  - Train/test split creation for simple validation
-  - Data quality assessment tools
+- **`src/feature_engineering/vn30_data_manager.py`** - VN30 data management module
+  - Qlib format data loading and validation utilities with TFT compatibility
+  - Advanced data preprocessing functions for VN30 optimization
+  - TFT-specific train/validation/test split creation
+  - Comprehensive data quality assessment and health reporting
 
-- **`src/data_processing/feature_engineering.py`** - Basic feature engineering module
-  - Technical indicator calculation functions
-  - Feature normalization and scaling utilities
-  - Basic feature validation and cleaning
-  - Configuration management for feature sets
+- **`src/feature_engineering/tft_feature_engineer.py`** - TFT-compatible feature engineering module (also referenced above)
+  - TFT-compatible technical indicator calculation functions
+  - Advanced feature normalization and scaling utilities for VN30
+  - Comprehensive feature validation and cleaning with TFT compatibility
+  - Advanced configuration management for VN30-specific feature sets
 
 ## Data Artifacts for 03A
 

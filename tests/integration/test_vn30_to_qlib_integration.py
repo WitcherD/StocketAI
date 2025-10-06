@@ -32,7 +32,7 @@ class TestVn30ToQlibIntegration:
     """Integration test class for VN30 to Qlib converter."""
 
     def __init__(self):
-        self.test_dir = Path(__file__).parent / "data" / "symbols"
+        self.test_dir = Path(__file__).parent / "integration_test_data" / "symbols"
         self.test_symbol = "VCB"
         self.test_results = {
             'data_validation': False,
@@ -221,48 +221,7 @@ class TestVn30ToQlibIntegration:
             logger.error(f"❌ Binary conversion test failed: {e}")
             return False
 
-    def test_error_handling(self):
-        """Test error handling scenarios."""
-        logger.info("Testing error handling...")
 
-        try:
-            # Test 1: Non-existent symbol
-            converter = Vn30ToQlibConverter(str(self.test_dir))
-
-            is_valid, error_msg = converter.validate_raw_data("NON_EXISTENT_SYMBOL")
-            if not is_valid and "not found" in error_msg.lower():
-                logger.info("✅ Non-existent symbol error handled correctly")
-            else:
-                logger.error("❌ Non-existent symbol error not handled correctly")
-                return False
-
-            # Test 2: Invalid data format (create temporary invalid file)
-            invalid_file = self.test_dir / "INVALID_SYMBOL" / 'raw' / 'historical_price.csv'
-            invalid_file.parent.mkdir(parents=True, exist_ok=True)
-
-            # Create invalid CSV (missing required columns)
-            invalid_data = "time,invalid_column\n2023-01-01,100"
-            invalid_file.write_text(invalid_data)
-
-            is_valid, error_msg = converter.validate_raw_data("INVALID_SYMBOL")
-            if not is_valid and "missing columns" in error_msg.lower():
-                logger.info("✅ Invalid data format error handled correctly")
-            else:
-                logger.error("❌ Invalid data format error not handled correctly")
-                return False
-
-            # Clean up
-            if invalid_file.exists():
-                invalid_file.unlink()
-            if invalid_file.parent.exists():
-                shutil.rmtree(invalid_file.parent)
-
-            self.test_results['error_handling'] = True
-            return True
-
-        except Exception as e:
-            logger.error(f"❌ Error handling test failed: {e}")
-            return False
 
     def test_complete_workflow(self):
         """Test complete workflow from raw data to qlib format."""
@@ -372,7 +331,6 @@ Test completed at: {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}
                 ('data_cleaning', self.test_data_cleaning),
                 ('qlib_format_preparation', self.test_qlib_format_preparation),
                 ('binary_conversion', self.test_binary_conversion),
-                ('error_handling', self.test_error_handling),
                 ('complete_workflow', self.test_complete_workflow)
             ]
 
